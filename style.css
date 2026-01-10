@@ -20,17 +20,18 @@ margin-right: 15px;
 nav ul li{
 display: inline-block;
 line-height: 10px;
-margin: 0 4px;
+margin: 0 2px;
 }
 nav ul li a{
 color: white;
 font-size: 17px;
 padding: 7px 13px;
 border-radius: 3px
-text-transform: uppercase;
+text-transform uppercase;
 }
 
 a.active,a:hover{
+decoration: none;
 background: blue;
 transition: .5s;
 }
@@ -41,20 +42,18 @@ padding: 20 10px
 float: left;
 }
 
+.container{
+display: grid;
+place-items: center;
+margin-inline: 1rem;
+padding-block: 0;
+float: center;
 
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: right;
-  padding: 0 16px;
 }
 
-@media (max-width: 600px) {
-  .brand {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
+.card-grid{
+display: grid;
+row-gap: 3.5;
 }
 
 
@@ -83,52 +82,151 @@ float: left;
 }
 
 /* Body main*/
-
 .card{
-   padding: 1.4rem 1.5rem 1.5rem;
-     border-radius: 18px;
-     background:
-       radial-gradient(circle at top left, rgba(5, 127, 158, 0.811), transparent 55%),
-       radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.91), transparent 60%),
-       #df7803;
-     border: 1px solid rgba(201, 196, 196, 0.788);
-     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8);
-     display: flex;
-     flex-direction: column;
-     gap: 0.9rem;
-     width: 19rem;
-     height: 19rem;
- }
-
-.tile-grid{
-display: column;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 11px;
-  padding: 1px;
+  display: block;
+  margin: 20px; 
+  width: 19rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 500px) {
-  .site-header {
-    padding-inline: 10rem;
-    flex-wrap: wrap;
-    gap: 4rem;
-  }
+.card-img-top{
+  display: block;
+border-top-left-radius: 0.5rem;
+border-top-right-radius: 0.5rem;
+height: 10rem;
+width: 19rem;
+}
 
-  .page-main {
-    padding-inline: 1.3rem;
-  }
+.card-body{
+  display:block;
+padding: 25px;
+margin: -10px;
+}
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card-text{
+  color: #555;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+}
 
-  .main-nav ul {
-    gap: 5rem;
-    font-size: 0.78rem;
-  }
+.card__button{
+text-decoration: none;
+font-size: var(--small-font-size);
+font-weight: 500;
+color: var(--first-color);
+}
 
-  .hero {
-    padding-inline: 3rem;
+.card__button:hover{
+text-decoration: underline;
+background: white;
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px){
+  .col-md-3{
+    flex: 0 0 auto;
+    width:25%
   }
 }
 
-.fle
+/*Home Page*/
 
 #Engineering{
+width: 19rem;
+height: 27rem;
+border-radius: 1.2rem;
+}
+
+#Training{
+width: 19rem;
+height: 27rem;
+border-radius: 1.2rem;
+}
+
+
+#Refresh{
+width: 19rem;
+height: 27rem;
+border-radius: 1.2rem;
+font-size: 13px;
+font-family: Arial, sans-serif;
+}
+
+#Farming{
+width: 19rem;
+height: 27rem;
+border-radius: 1.2rem;
+}
+
+
+
+/* Engineering Page */
+#ENG{
+display: grid;
+padding-inline: 1rem;
+box-shadow: none;
+max-width:5000px;
+overflow: hidden;
+margin-line: 1 rem;
+padding-block: 0;
+place-items: center;
+float: center;
+}
+#ima{
+display: flex;
+width:1400px;
+height: 19rem;
+}
+#ima2{
+display: flex;
+width:1400px;
+height: 19rem;
+}
+#ima3{
+display: flex;
+width:1400px;
+height: 19rem;
+}
+.c_body{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding: 20px;
+}
+
+.c_text p{
+margin-top: 10px;
+margin-bottom: 20px;
+font-family: calibre;
+font-size: 12px;
+}
+.c__title{
+margin-top: 0;
+margin-bottom: 8px;
+font-size: 24px;
+}
+.image{
+width: 19rem;
+height:19rem;
+border-radius: 0.5rem;
+object-fit: cover:
+}
+
+.img-fluid{
+
+}
+
+/* Refreshco Page*/
+#Ref{
+display: flex;
+margin-top: 0px;
+padding-line: 1px;
 }
