@@ -27,7 +27,7 @@ color: white;
 font-size: 17px;
 padding: 7px 13px;
 border-radius: 3px
-text-transform uppercase;
+text-transform: uppercase;
 }
 
 a.active,a:hover{
@@ -133,7 +133,6 @@ background: white;
 @media (min-width: 768px){
   .col-md-3{
     flex: 0 0 auto;
-    width:25%
   }
 }
 
@@ -229,4 +228,34 @@ object-fit: cover:
 display: flex;
 margin-top: 0px;
 padding-line: 1px;
+}
+
+.c_title {
+text-decoration: bold;
+}
+
+.square{
+display: block;
+height: 23.3rem;
+width: 15rem;
+border-radius: 0.7rem;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.image2{
+width: 15rem;
+height: 15rem;
+object-fit: cover;
+border-radius: 0.8rem;
+border-bottom-left-radius: 0.2rem;
+border-bottom-right-radius: 0.2rem;
+}
+.s_btn{
+text-decoration: none;
+decoration: none;
+background: light-grey;
+margin-top: 70px;
+margin-bottom: 0;
+margin-inline: 4px;
+float: right;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
