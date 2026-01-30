@@ -16,18 +16,20 @@
         <div>
 
             <ul id="menuList">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="Engineering Services.html"> Engineering Services</a></li>
                 <li><a href="Refreshco Water And Beverages.html">Refreshco</a></li>
                 <li><a href="Training Courses.html"> Training</a></li>
                 <li><a href="Farming Services.html"> Farm</a></li>
                 <li><a href="About.html">About</a></li>
             </ul>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            </div>
         </div>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-        </div>
+
     </nav>
+
 </header>
 
 <script>
@@ -83,10 +85,10 @@ function toggleMenu() {
     const cardElement = document.getElementById("t_card");
 
     cardAlert.addEventListener('click', function(){
-    alert("Do you want to go ahead and apply for a course?")
+    alert("Do you want to go ahead and apply for a course?");
     });
     cardElement.addEventListener('click', function(){
-    alert("Do you want to go ahead and apply for a course?")
+    alert("Do you want to go ahead and apply for a course?");
     });
 </script>
 </body>
