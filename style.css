@@ -96,7 +96,7 @@ display: none;
 color: white;
 font-size: 30px;
 }
-@media(max-width: 767px){
+@media(max-width: 400px){
 nav ul{
 display: grid;
 position: absolute;
@@ -659,4 +659,5 @@ text-align: center;
 .socials{
 text-align: center;
 }
+
 }
