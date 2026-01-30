@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>STRAIN ENGINEERING pvt</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="about.css"/>
+    <script src="https://kit.fontawesome.com/javascript.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -12,7 +15,7 @@
     <nav class="nav-link">
         <div>
 
-            <ul>
+            <ul id="menuList">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Engineering Services.html"> Engineering Services</a></li>
                 <li><a href="Refreshco Water And Beverages.html">Refreshco</a></li>
@@ -21,8 +24,51 @@
                 <li><a href="About.html">About</a></li>
             </ul>
         </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
 
     </nav>
 </header>
+
+<script>
+    let menuList = document.getElementById("menuList");
+    menuList.style.maxHeight = "0px";
+
+function toggleMenu() {
+    if (menuList.style.maxHeight === "0px" || menuList.style.maxHeight ==="") {
+        menuList.style.maxHeight = menuList.scrollHeight + "px";
+    } else {
+        menuList.style.maxHeight = "0px";
+    }
+    console.log(menuList.style.maxHeight);
+}
+
+</script>
+
+<div id="calculator">
+    <input id="display" readonly>
+    <div id="keys">
+        <button onclick="appendToDisplay('7')" >7</button>
+        <button onclick="appendToDisplay('8')" >8</button>
+        <button onclick="appendToDisplay('9')" >9</button>
+        <button onclick="appendToDisplay('+')" class="operator">+</button>
+        <button onclick="appendToDisplay('4')" >4</button>
+        <button onclick="appendToDisplay('5')" >5</button>
+        <button onclick="appendToDisplay('6')" >6</button>
+        <button onclick="appendToDisplay('-')" class="operator">-</button>
+        <button onclick="appendToDisplay('1')" >1</button>
+        <button onclick="appendToDisplay('2')" >2</button>
+        <button onclick="appendToDisplay('3')" >3</button>
+        <button onclick="appendToDisplay('*')" class="operator">*</button>
+        <button onclick="appendToDisplay('0')" >0</button>
+        <button onclick="appendToDisplay('.')" >.</button>
+        <button onclick="calculate()" >=</button>
+        <button onclick="appendToDisplay('/')" class="operator">/</button>
+        <button onclick="clearDisplay()" class="operator">C</button>
+
+    </div>
+</div>
+<script src="javascript.js"></script>
 </body>
 </html>

@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <title>STRAIN ENGINEERING pvt</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/javascript.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 <header class="site-header">
-    <div class="logo"><img src="logo.jpg" alt="logo"></div>
+    <div class="logo"><img src="logo.jpg" alt="logo" style="height: 50px"></div>
     <nav class="nav-link">
         <div>
 
-            <ul>
+            <ul id="menuList">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Engineering Services.html"> Engineering Services</a></li>
                 <li><a href="Refreshco Water And Beverages.html">Refreshco</a></li>
@@ -21,8 +24,70 @@
                 <li><a href="About.html">About</a></li>
             </ul>
         </div>
-
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
     </nav>
 </header>
+
+<script>
+    let menuList = document.getElementById("menuList");
+    menuList.style.maxHeight = "0px";
+
+function toggleMenu() {
+    if (menuList.style.maxHeight === "0px" || menuList.style.maxHeight ==="") {
+        menuList.style.maxHeight = menuList.scrollHeight + "px";
+    } else {
+        menuList.style.maxHeight = "0px";
+    }
+    console.log(menuList.style.maxHeight);
+}
+
+</script>
+
+<div class="container" id="Train">
+    <div class="t_content">
+
+        <h1>Training Courses</h1>
+        <br>
+        <p class="c__text">Strain Engineering provides train course for employees and board member of companies.
+        Companies are able to apply for course, what content to be covered and how long they want their training to last.
+        Strain takes four to five training each year depending on how companies respond to our training adverts.</p>
+        <p class="c__text">This ongoing year we are project to hold at least three to six training in all the quarters.</p>
+        <p class="c__text">Each year, Strain holds an induction training for board members for UMSCC that part-takes between February and April.</p>
+        <p class="c__text">We have various courses that we offer, see below</p>
+
+
+        <section class="section_training" id="">
+            <div class="training_row">
+                <div class="card" id="t_card">
+                    <div class="card-body" onclick="register()">
+                        <img src="train1.jpg" alt="" class="t_image">
+                        <img src="train1.jpg" alt="" class="t_image">
+                    </div>
+
+                </div>
+                <div class="card" id="tr_card" onclick="register()">
+                    <div class="card-body">
+                        <img src="board.jpg" alt="" class="t_image">
+                        <img src="bord1.jpg" alt="" class="t_image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+    const cardAlert = document.getElementById("tr_card");
+    const cardElement = document.getElementById("t_card");
+
+    cardAlert.addEventListener('click', function(){
+    alert("Do you want to go ahead and apply for a course?")
+    });
+    cardElement.addEventListener('click', function(){
+    alert("Do you want to go ahead and apply for a course?")
+    });
+</script>
 </body>
 </html>

@@ -4,41 +4,125 @@
   <meta charset="UTF-8">
   <title>STRAIN ENGINEERING pvt</title>
   <link rel="stylesheet" href="style.css"/>
+  <script src="https://kit.fontawesome.com/javascript.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 <header class="site-header">
-  <div class="logo"><img src="logo.jpg" alt="logo"></div>
+  <div class="logo"><img src="logo.jpg" alt="logo" style="height: 50px"></div>
   <nav class="nav-link">
     <div>
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
+      <ul id="menuList">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="Engineering Services.html"> Engineering Services</a></li>
         <li><a href="Refreshco Water And Beverages.html">Refreshco</a></li>
         <li><a href="Training Courses.html"> Training</a></li>
         <li><a href="Farming Services.html"> Farm</a></li>
         <li><a href="About.html">About</a></li>
       </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
     </div>
 
   </nav>
+
 </header>
 
-<div class="container" id="Ref">
-  <div class="row">
+<script>
+  let menuList = document.getElementById("menuList");
+  menuList.style.maxHeight = "0px";
 
-    <h1 class="c_title">Refrescho Water & Beverages</h1>
+function toggleMenu() {
+  if (menuList.style.maxHeight === "0px" || menuList.style.maxHeight ==="") {
+      menuList.style.maxHeight = menuList.scrollHeight + "px";
+  } else {
+      menuList.style.maxHeight = "0px";
+  }
+  console.log(menuList.style.maxHeight);
+}
 
-    <h3 class="c__text"></h3>
-    <div class="">
+
+</script>
+<div class="refreshc">
+  <div class="container" id="Ref">
+    <div class="ref_content">
+
+      <h1 class="c_title">Refrescho Water & Beverages</h1>
+      <br>
+      <p class="c__text">Refreshco produces water and beverages with the brand name Manna Brook.
+      The product line includes: 500ml, 2liter and 5liter bottled water. The bottled water is packaged in different sizes according to the product.
+      The packages are as follows:</p>
+      <ul>
+        <li class="ref_li">500ml bottled water is sold in a pack of 12 units</li>
+        <li class="ref_li">2ltr is sold in a pack of 6 units</li>
+        <li class=" ref_li">5ltr is sold in a pack 4 unit</li>
+      </ul>
+      <p class="c__text">If you want a customised packaging, it can be done for you.</p>
+
+      <section>
+        <div class="product_row">
+          <div class="square">
+            <img src="2ltr.jpg" alt="" class="image2" onclick="showPrice()">
+            <div class="c-body">
+              <h4 class="c__title">500ml</h4>
+              <select>
+                <option>unit</option>
+                <option value="">case</option>
+              </select>
+              <button class="s_btn">BUY</button>
+            </div>
+          </div>
+
+          <div class="square">
+            <img src="2ltr.jpg" alt="" class="image2" onclick="showPrice()">
+            <div class="c-body">
+              <h4 class="c__title">2 liter</h4>
+              <select>
+                <option>unit</option>
+                <option value="">case</option>
+              </select>
+              <button class="s_btn">BUY</button>
+            </div>
+          </div>
+
+
+          <div class="square">
+            <img src="2ltr.jpg" alt="" class="image2" onclick="showPrice()">
+            <div class="c-body">
+              <h4 class="c__title">5 liter</h4>
+              <select>
+                <option>unit</option>
+                <option value="">case</option>
+              </select>
+              <button class="s_btn">BUY</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside>
+      <p class="c__text">Refreshco also produces bottled water for special ceremonies branded with the customers' logo.</p>
       <img src="" alt="">
-      <img src="" alt="">
-
+      </aside>
     </div>
   </div>
 </div>
+<script>
+  function showPrice(button) {
+    const container = button.closest('.square');
+    const productTitle = container.querySelector('.c__title').innerText;
 
 
+    const select = container.querySelector('.price-select');
+    const price = select.value;
+    const type = select.options[select.selectedIndex].text;
+
+    alert(`You chose ${productTitle} (${type}). The price is $${price}`);
+}
+
+</script>
 </body>
 </html>

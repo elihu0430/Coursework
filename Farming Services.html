@@ -4,31 +4,119 @@
     <meta charset="UTF-8">
     <title>STRAIN ENGINEERING pvt</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/javascript.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 <header class="site-header">
-    <div class="logo"><img src="logo.jpg" alt="logo"></div>
+    <div class="logo"><img src="logo.jpg" alt="logo" style="height: 50px"></div>
     <nav class="nav-link">
         <div>
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <ul id="menuList">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="Engineering Services.html"> Engineering Services</a></li>
                 <li><a href="Refreshco Water And Beverages.html">Refreshco</a></li>
                 <li><a href="Training Courses.html"> Training</a></li>
                 <li><a href="Farming Services.html"> Farm</a></li>
                 <li><a href="About.html">About</a></li>
             </ul>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            </div>
         </div>
 
     </nav>
+
 </header>
-<div class="container">
-    <div class="">
 
-    </divclass>
+<script>
+    let menuList = document.getElementById("menuList");
+    menuList.style.maxHeight = "0px";
+
+function toggleMenu() {
+    if (menuList.style.maxHeight === "0px" || menuList.style.maxHeight ==="") {
+        menuList.style.maxHeight = menuList.scrollHeight + "px";
+    } else {
+        menuList.style.maxHeight = "0px";
+    }
+    console.log(menuList.style.maxHeight);
+}
+
+</script>
+<div class="farm">
+    <div class="container" id="Farm">
+        <div class=""></div>
+        <div>
+
+            <h1 class="c_title"> Farming Serivces</h1>
+            <p class="c__text">In this setion, Strain provides fresh the farm products.</p>
+            <p class="c__text">Strain Agro-activities include Horticultural and Commercial Farming activities. The crops are grown on Glen Brook Farm in Nyabira.
+            Horticultural crops planted are tomatoes, onions, green veggies, butter nuts and paprika. The Commercial crops regularly planted include Maize, Soya beans, Sweet Potatoes, Sorghum and Potatoes.</p>
+            <div class="">
+                <div class="card" id="farm_card">
+                    <h3 class="c_title">Commercial Crops</h3>
+                    <br>
+                    <br>
+                    <div class="crop__image">
+                        <figure class="carousel_fig" id="caro__maize">
+                            <img src="maize.jpg" alt="Maize">
+                            <figcaption>This figure illustrates commercial maize that has been planted</figcaption>
+                        </figure>
+
+                        <figure class="carousel_fig" >
+                            <img src="isoya.jpg" alt="Soyabeans" style="height: 75%">
+                            <figcaption>Figure illustrates Soyabeans that has planted</figcaption>
+                        </figure>
+
+                        <figure class="carousel_fig">
+                            <img src="po.jpg" alt="Potato"  style="heigh: 339px">
+                            <figcaption>Figure shows potatoes that have been planted</figcaption>
+                        </figure>
+
+                        <figure class="carousel_fig">
+                            <img src="sweet%20potato.jpg" alt="Sweet Potato" style="width: 220px">
+                            <figcaption>Figure shows harvest for sweet potatoes</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+
+                <div class="card" id="horti">
+                    <h3 class="c_title">Horticulture Crops</h3>
+                    <br>
+                    <div class="crop__image">
+                        <figure class="carousel_fig">
+                            <img src="kale.jpg" alt="Kale">
+                            <figcaption>This figure illustrates kale vegetables that have been planted</figcaption>
+                        </figure>
+
+                        <figure class="carousel_fig">
+                            <img src="bn.webp" alt="Butter nuts" style="height: 270px">
+                            <figcaption>Figure illustrates butternuts that have been planted</figcaption>
+                        </figure>
+
+                        <figure class="carousel_fig">
+                            <img src="papr.jpg" alt="Paprika"  style="heigh: 339px">
+                            <figcaption>Figure shows Paprika that have been planted</figcaption>
+                        </figure>
+
+                        <figure class="carousel_fig">
+                            <img src="tomato.jpg" alt="Tomato" style="width: 350px">
+                            <figcaption>Figure shows tomatoes that have been planted</figcaption>
+                        </figure>
+
+                        <figure class="carousel_fig">
+                            <img src="onion.jpg" alt="Onion" style="width: 300px">
+                            <figcaption>Figure shows onions that have been planted</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 </body>
 </html>
