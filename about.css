@@ -3,7 +3,7 @@
 padding: 0;
 margin: 0%;
 text-decoration: none;
-list-style: none
+list-style: none;
 box-sizing: border-box;
 }
 .header-link{
@@ -18,8 +18,8 @@ margin-bottom: 20px;
 
 .nav-link{
 float: right;
-margin-right: 4px;
 margin : 2px;
+margin-right: 4px;
 }
 
 nav ul li{
@@ -31,19 +31,19 @@ nav ul li a{
 color: white;
 font-size: 17px;
 padding: 7px 13px;
-border-radius: 3px
+border-radius: 3px;
 text-transform: uppercase;
 }
 
 a.active,a:hover{
-decoration: none;
+text-decoration: none;
 background: blue;
-transition: .5s;
+transition: 0.5s;
 }
 
 div.logo{
-line-height: 15px;
-padding: 20 10px
+line-height: 1px;
+margin-top: -1.5rem;
 float: left;
 }
 
@@ -52,7 +52,6 @@ float: left;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
   margin: 0 auto;
-  margin-bottom: 20px;
   max-width: 100%;
   min-height: 25em;
   align-items: start;
@@ -61,14 +60,14 @@ float: left;
 
 .card-grid{
 display: grid;
-row-gap: 1.5;
+row-gap: 1.5rem;
 }
 
 
 .Main-title{
   font-size: 25px;
   font-weight: bold;
-  margin: 1;
+  margin: 1rem;
   color: green;
 }
 
@@ -81,18 +80,57 @@ row-gap: 1.5;
 }
 
 .logo{
-  width: 2rem;
-  height: auto;
+  width: 1rem;
+  height: 1px;
 }
 .logo-big{
-  width: 12rem;
-  height: auto;
+  width: 2rem;
+  height: 2px;
 }
 
-body{
-margin: 0;
+.menu-icon{
+display: none;
+}
+.menu-icon i{
+color: white;
+font-size: 30px;
+}
+@media(max-width: 850px){
+nav ul{
+display: grid;
+position: absolute;
+top: 70px;
+left: 0;
+right: 0;
+flex-direction: column;
+align-items: center;
+text-align: center;
+background: #004274;
+gap: 0;
+overflow: hidden;
+z-index: 1000;
+max-height: 0;
+transition: max-height 0.3s ease;
+}
+nav ul li{
+padding: 20px;
 
-height: 100vh;
+}
+
+.menu-icon{
+display: block;
+cursor: pointer;
+}
+#menuList {
+max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+}
+body{
+background-color: white;
+height: auto;
+
 }
 
 /*About*/
