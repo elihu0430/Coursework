@@ -45,6 +45,24 @@ function toggleMenu() {
   console.log(menuList.style.maxHeight);
 }
 
+  function showPrice(button) {
+    const container = button.closest('.square');
+    const productTitle = container.querySelector('.c__title').innerText;
+
+
+    const select = container.querySelector('.price-select');
+    const price = select.value;
+    const type = select.options[select.selectedIndex].text;
+    const userConfirmations = confirm(`You chose ${productTitle} (${type}). The price is $${price}`);
+
+    if(userConfirmations){
+    window.location.href = "mailto:strainengineering@outlook.com?subject="
+    + encodeURIComponent(productTitle + " (" + type + ") for $" + price);
+
+    } else{
+    alert("Order cancelled");
+    }
+}
 
 </script>
 <div class="refreshc">
@@ -69,11 +87,11 @@ function toggleMenu() {
             <img src="2ltr.jpg" alt="" class="image2" onclick="showPrice()">
             <div class="c-body">
               <h4 class="c__title">500ml</h4>
-              <select>
-                <option>unit</option>
-                <option value="">case</option>
-              </select>
-              <button class="s_btn">BUY</button>
+                <select class="price-select">
+                    <option value="0.16">unit</option>
+                    <option value="1.80">case</option>
+                </select>
+                <button class="s_btn" onclick="showPrice(this)">ORDER</button>
             </div>
           </div>
 
@@ -81,11 +99,11 @@ function toggleMenu() {
             <img src="2ltr.jpg" alt="" class="image2" onclick="showPrice()">
             <div class="c-body">
               <h4 class="c__title">2 liter</h4>
-              <select>
-                <option>unit</option>
-                <option value="">case</option>
-              </select>
-              <button class="s_btn">BUY</button>
+                <select class="price-select">
+                    <option value="0.55">unit</option>
+                    <option value="3.60">case</option>
+                </select>
+                <button class="s_btn" onclick="showPrice(this)">ORDER</button>
             </div>
           </div>
 
@@ -94,11 +112,12 @@ function toggleMenu() {
             <img src="2ltr.jpg" alt="" class="image2" onclick="showPrice()">
             <div class="c-body">
               <h4 class="c__title">5 liter</h4>
-              <select>
-                <option>unit</option>
-                <option value="">case</option>
-              </select>
-              <button class="s_btn">BUY</button>
+                <select class="price-select">
+                    <option value="1">unit</option>
+                    <option value="4">case</option>
+                </select>
+                <button class="s_btn" onclick="showPrice(this)">ORDER</button>
+
             </div>
           </div>
         </div>
@@ -110,19 +129,6 @@ function toggleMenu() {
     </div>
   </div>
 </div>
-<script>
-  function showPrice(button) {
-    const container = button.closest('.square');
-    const productTitle = container.querySelector('.c__title').innerText;
 
-
-    const select = container.querySelector('.price-select');
-    const price = select.value;
-    const type = select.options[select.selectedIndex].text;
-
-    alert(`You chose ${productTitle} (${type}). The price is $${price}`);
-}
-
-</script>
 </body>
 </html>
