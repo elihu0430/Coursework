@@ -95,7 +95,7 @@ display: none;
 color: white;
 font-size: 30px;
 }
-@media(max-width: 450px){
+@media(max-width: 767px){
 nav ul{
 display: grid;
 position: absolute;
@@ -186,5 +186,4 @@ background-color: hsl(36, 100%, 63%);
 }
 .operator:active{
 background-color: hsl(36, 100%, 74%);
-
 }
