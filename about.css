@@ -1,3 +1,4 @@
+
 /* Header */
 *{
 padding: 0;
@@ -13,7 +14,7 @@ box-sizing: border-box;
 }
 
 header{
-margin-bottom: 20px;
+margin-bottom: 0;
 }
 
 .nav-link{
@@ -95,7 +96,7 @@ display: none;
 color: white;
 font-size: 30px;
 }
-@media(max-width: 767px){
+@media(max-width: 1100px){
 nav ul{
 display: grid;
 position: absolute;
@@ -133,6 +134,7 @@ height: auto;
 
 }
 
+
 /*About*/
 #keys{
 display: grid;
@@ -142,7 +144,7 @@ padding:25px;
 }
 
 #calculator{
-
+margin-top: 7px;
 font-family: Arial,sans-serif;
 background-color: hsl(0, 0%, 15%);
 border-radius: 15px;

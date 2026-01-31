@@ -14,7 +14,7 @@ box-sizing: border-box;
 }
 
 header{
-margin-bottom: 20px;
+margin-bottom: 0;
 }
 
 .nav-link{
@@ -353,12 +353,23 @@ overflow: hidden;
 display: flex;
 padding-inline: 1rem;
 box-shadow: none;
-max-width:5000px;
+max-width: 100%;
 overflow: hidden;
 margin-inline: 1rem;
+margin: auto;
 padding-block: 0;
 place-items: center;
 float: center;
+background-color: #001f4d;
+background: radial-gradient(circle at top left, #0000ff, transparent 55%), radial-gradient(circle at bottom right, #00aaff, transparent 75%);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.e_content{
+background-color: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(1px);
+border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #ima{
 display: flex;
@@ -367,7 +378,11 @@ height: auto;
 flex-direction: columns;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 transition: transform 0.4s ease, box-shadow 0.4s ease;
+background-color: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(3px);
+border: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 #ima2{
 display: flex;
 width: 100%;
@@ -375,7 +390,11 @@ height: auto;
 flex-direction: columns;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 transition: transform 0.4s ease, box-shadow 0.4s ease;
+background-color: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(3px);
+border: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 #ima3{
 display: flex;
 width: 100%;
@@ -383,6 +402,9 @@ height: auto;
 flex-direction: columns;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 transition: transform 0.4s ease, box-shadow 0.4s ease;
+background-color: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(3px);
+border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 #ima:hover{
@@ -460,7 +482,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 
 .refreshc{
 background-color: hsl(45, 29%, 97%);
-background-image: url(https://www.shutterstock.com/shutterstock/photos/2596381081/display_1500/stock-photo-drinking-water-production-line-on-conveyor-belt-pet-plastic-water-bottles-in-drink-factory-pet-2596381081.jpg);
+background-image: url("refback.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: 80%;
@@ -571,7 +593,7 @@ justify-content: center;
 
 .farm{
 background-color: hsl(45, 29%, 97%);
-background-image: url(https://subjecttoclimate.nyc3.digitaloceanspaces.com/news/34863/2u1RcUYpjNwJBAY3FUqAPzKwzPKtmharNlu3XqEb.gif);
+background-image: url("farm.gif");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
