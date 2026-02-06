@@ -1,5 +1,8 @@
-// Calculator
 
+
+
+
+// Calculator
 const display = document.getElementById("display");
 let isOn = false;
 
@@ -88,6 +91,33 @@ if (papr) papr.style.width = "330px";
 if (toma) toma.style.width = "330px";
 if (onions) onions.style.width = "390px";
 
+function applyMobileStyles(){
+if (window.innerWidth <= 768){
+const ftitle = document.querySelector(".c_title");
+if (ftitle){
+ftitle.style.fontSize = "24px";
+ftitle.style.textAlign = "center";
+ftitle.style.marginBottom = "12px";
+}
+
+const paragraph = document.querySelectorAll(".f__txt");
+paragraph.forEach(p => {
+p.style.fontSize = "16px";
+p.style.lineHeight = "1.5";
+p.style.textAlign = "justify";
+p.style.padding = "0 10px";
+});
+const crds = document.querySelectorAll(".card");
+crds.forEach(card => {
+card.style.width = "100%";
+card.style.margin = "10px 0";
+});
+const farm = document.querySelector("#Farm"); if (farm) {
+farm.style.flexDirection = "column";
+farm.style.alignItems = "center";
+}
+}
+}
 
 if (maize) maize.style.height = "200px";
 if (soya) soya.style.height = "200px";
