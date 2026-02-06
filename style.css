@@ -2,7 +2,7 @@
 /* Header */
 *{
 padding: 0;
-margin: 0%;
+margin: 0;
 text-decoration: none;
 list-style: none;
 box-sizing: border-box;
@@ -22,6 +22,7 @@ float: right;
 margin : 2px;
 margin-right: 4px;
 }
+
 
 nav ul li{
 display: inline-block;
@@ -61,7 +62,8 @@ float: left;
 
 .card-grid{
 display: grid;
-row-gap: 1.5rem;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1rem;
 }
 
 
@@ -123,9 +125,12 @@ display: block;
 cursor: pointer;
 }
 #menuList {
-max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+height: 276px;
+overflow: hidden;
+transition: max-height 0.3s ease;
+}
+header{
+position: relative;
 }
 }
 body{
@@ -137,9 +142,6 @@ height: auto;
 
 /* Body main*/
 main{
-display: flex;
-flex-direction: column;
-gap: 30px;
 margin-top: 2px;
 padding: 0;
 margin-bottom: 20px;
@@ -149,10 +151,11 @@ margin-bottom: 20px;
 .card{
   display: block;
   margin: 20px;
-  width: 19rem;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+  flex: 1 1 250px;
+  max-width: auto;
 }
 
 article{
@@ -166,8 +169,10 @@ height: auto;
   display: block;
 border-top-left-radius: 0.5rem;
 border-top-right-radius: 0.5rem;
-height: 10rem;
-width: 19rem;
+height: auto;
+width: 100%;
+max-height: 19rem;
+object-fit: cover;
 }
 
 .card-body{
@@ -203,17 +208,85 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 .row{
   display:flex;
   flex-wrap: wrap;
+  margin: 0;
 }
-@media (min-width: 768px){
+.col-md-3{
+    padding: 0;
+  }
+
+
+@media (max-width: 1100px) {
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 24rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    max-height: 14rem;
+    object-fit: cover;
+  }
   .col-md-3{
-    flex: 0 0 auto;
+  width: 100%;
+  max-width: 28rem;
+  }
+  #carousel_slide{
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  }
+  #summ{
+  width: 88%;
   }
 }
+@media (max-width: 1100px) and (min-width: 768px){
+.row{
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+}
+.col-md-3 {
+flex: 0 0 45%;
+max-width: 28rem;
+}
+card{
+width: 100%;
+}
+@media (max-width: 768px){
+.row{
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+}
+.col-md-3 {
+width: 100%;
+max-width: 22rem;
+}
+}
+}
+
+
+
 
 /*Home Page*/
 
 #Engineering{
-width: 19rem;
+width: 100%;
+max-width: 19rem;
 height: 27rem;
 border-radius: 1.2rem;
 background-color: rgba(255, 255, 255, 0.3);
@@ -222,7 +295,8 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #Training{
-width: 19rem;
+width: 100%;
+max-width: 19rem;
 height: 27rem;
 border-radius: 1.2rem;
 background-color: rgba(255, 255, 255, 0.3);
@@ -231,7 +305,8 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #Refresh{
-width: 19rem;
+width: 100%;
+max-width: 19rem;
 height: 27rem;
 border-radius: 1.2rem;
 font-size: 13px;
@@ -243,7 +318,8 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #Farming{
-width: 19rem;
+width: 100%;
+max-width: 19rem;
 height: 27rem;
 border-radius: 1.2rem;
 background-color: rgba(255, 255, 255, 0.3);
@@ -306,7 +382,7 @@ background-color: rgba(0, 0, 0, 0.2);
 
 .parallelogram{
 display: block;
-width: 80%;
+width: 83%;
 margin-top: 40px;
 margin-left: auto;
 margin-right: auto;
@@ -335,7 +411,7 @@ transform: skew(-20deg);
 
 #summ{
 display: block;
-width: 80%;
+max-width: 80%;
 margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
@@ -373,9 +449,8 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #ima{
 display: flex;
-width: 100%;
+max-width: 100%;
 height: auto;
-flex-direction: columns;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 transition: transform 0.4s ease, box-shadow 0.4s ease;
 background-color: rgba(255, 255, 255, 0.5);
@@ -385,9 +460,8 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 
 #ima2{
 display: flex;
-width: 100%;
+max-width: 100%;
 height: auto;
-flex-direction: columns;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 transition: transform 0.4s ease, box-shadow 0.4s ease;
 background-color: rgba(255, 255, 255, 0.5);
@@ -397,9 +471,8 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 
 #ima3{
 display: flex;
-width: 100%;
+max-width: 100%;
 height: auto;
-flex-direction: columns;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 transition: transform 0.4s ease, box-shadow 0.4s ease;
 background-color: rgba(255, 255, 255, 0.5);
@@ -409,18 +482,19 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 
 #ima:hover{
 transform: translateY(-10px);
-box-shadow: 0 10px 20px rgba (0, 0, 0, 0.3);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 #ima2:hover{
 transform: translateY(-10px);
-box-shadow: 0 10px 20px rgba (0, 0, 0, 0.3);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 #ima3:hover{
 transform: translateY(-10px);
-box-shadow: 0 10px 20px rgba (0, 0, 0, 0.3);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 .c_body{
 display: flex;
+flex: 1;
 flex-direction: column;
 justify-content: flex-start;
 padding: 20px;
@@ -447,25 +521,43 @@ border-radius: 0.5rem;
 object-fit: cover;
 }
 
-.img-fluid{
-}
 
 .colum{
-display:flex;
+display: grid;
+flex-direction: row;
 flex-wrap: wrap;
 gap: 1rem;
-justify-content: center
-float: right;
+justify-content: center;
 }
 
-@media (max-width: 1210px){
+.card img.image{
+width: 40%;
+height: auto;
+object-fit: cover;
+}
+
+@media (max-width: 1100px){
 .card{
 max-width: 100%;
 }
 .colum{
-flex-direction: column;
+margin-top: 20px;
+flex-direction: row;
+}
+.e_content{
+max-width: 100%;
+}
+#ENG{
+width: 100%;
+}
+#ima, #ima2, #ima3{
+width: 100%;
 }
 }
+
+
+
+
 
 /* Refreshco Page*/
 #Ref{
@@ -500,7 +592,7 @@ width: 15rem;
 border-radius: 0.7rem;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 transition: transform 0.4s ease, box-shadow 0.4s ease;
-background-color: white:
+background: linear-gradient(to bottom right, lightblue, white);
 }
 .ref__content{
 background-color: white;
@@ -537,11 +629,12 @@ flex-wrap: wrap;
 margin: 20px;
 justify-content: center;
 align-items: center;
+color: black;
 }
 
-.ref_li{
-display: list-item;
- list-style-position: inside;
+.ref_li {
+list-style-type: disc;
+list-style-position: inside;
 }
 
 /*Training Courses*/
@@ -554,38 +647,54 @@ justify-content: center;
 }
 
 .section_training{
-display: grid;
+display: block;
 margin-top: 15px;
-flex-wrap: wrap;
+gap: 20px;
 }
 
 #t_card{
+display: inline-block;
 width: auto;
 height: auto;
 transition: transform 0.4s ease, box-shadow 0.5s ease;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 #tr_card{
+display: grid;
+flex-direction: row;
 width: auto;
 height: auto;
 transition: transform 0.3s ease, box-shadow 0.5s ease;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+
 }
 
 .training_row{
-display: flex;
-flex-wrap: wrap;
-justify-content: flex-start;
-gap: 20px:
+display: grid;
+flex-direction: row;
+/*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+gap: 19px;
+align-items: stretch;
 }
 
-t_image{
+.t_image{
+display: block;
 border-radius: 3px;
-border: black;
+border: 1px solid black;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+object-fit: cover;
+height: auto;
+width: auto;
+margin-bottom: 10px;
 }
 
+tr_card img{
+width: 100%;
+}
 /*Farming*/
 #Farm{
 display: flex;
+flex: 1 1 220px;
 margin: 0 auto;
 padding: 0 12px;
 justify-content: center;
@@ -599,6 +708,12 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
+.f__txt {
+color: white;
+font-family: "Times New Roman", serif;
+font-size: 17px;
+}
+
 .carousel_fig img{
 max-width: 100%;
 height: auto;
@@ -606,7 +721,8 @@ border-radius: 8px;
 }
 
 .crop__image{
-display: flex;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 flex-wrap: wrap;
 justify-content: flex-start;
 gap: 30px;
@@ -616,7 +732,8 @@ gap: 30px;
 .carousel_fig{
 display: block;
 margin-bottom: 30px;
-max-width: 400px;
+width: auto;
+height: auto;
 }
 
 #farm_card{
@@ -648,6 +765,11 @@ margin-top: 10px;
 text-align: left;
 }
 
+#maize, #soya, #sweetP, #potato, #kale, #butter, #paprika, #tomato, #onion{
+width: auto;
+height: auto;
+background: white;
+}
 
 
 
